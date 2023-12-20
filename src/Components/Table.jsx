@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import Delete from './Delete';
+import Link from 'next/link';
 
 const fetchData = async () => {
     const response = await fetch('http://localhost:3000/api/user'); // Replace with your actual server URL
@@ -43,7 +44,7 @@ const Table = async() => {
         <td>{item.grade}</td>
         <td>{item.courses}</td>
         <td><Delete data={item}/></td>
-        <td>Update</td>
+        <td><Link href="/Update">Update</Link></td>
       </tr>
     );
   })

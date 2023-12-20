@@ -2,7 +2,7 @@
 import axios from 'axios';
 import React from 'react';
 
-const ResisterForm = () => {
+const UpdateResister = () => {
 
 
     const handleData = async (e) => {
@@ -42,7 +42,7 @@ const ResisterForm = () => {
         <div className=" flex-col lg:flex-row-reverse">
        
           <div className="card  w-full  shadow-2xl bg-base-100">
-            <h1 className='text-center text-4xl font-bold mt-[10px]'>Resister Form</h1>
+            <h1 className='text-center text-4xl font-bold mt-[10px]'>Update Resister Form</h1>
             <form className="card-body" onSubmit={handleData}>
                 <div className='flex gap-3 justify-center'>
               <div className="form-control w-full">
@@ -86,4 +86,4 @@ const ResisterForm = () => {
     );
 };
 
-export default ResisterForm;
+export default UpdateResister;
