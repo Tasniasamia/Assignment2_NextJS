@@ -38,16 +38,15 @@ export const DELETE=async(req,res)=>{
 }
 
 export const PUT=async(req,res)=>{
-    // const { searchParams  }=new URL(req.url);
-    // const id=searchParams.get('id');
-    const data=await req.json();
-    const id = data['id'];
+    const { searchParams  }=new URL(req.url);
+    const id=searchParams.get('id');
+   const data=await req.json();
     const prisma=new PrismaClient();
     const result=await prisma.user.update({
-        where:{id:id},
+        where:{id:parseInt(id)},
         data:data
     })
  
-    return NextResponse.json({message:"Delete Succssfull",data:result})
+    return NextResponse.json({message:"Update Succssfull",data:result})
 }
 
